@@ -32,7 +32,13 @@ public class Bilde extends Tekst {
     
     @Override
     public String toString() {
-        return "BILDE\n" + super.toString() + url + "\n";
+    	
+    	//litt rar løsning for å arve toString fra Tekst og få riktig utskrift i testen
+    	return "BILDE\n" + super.toString().replace("TEKST\n", "") + url + "\n";
+    	
+    	//denne lagde feil i testeren til blogg.java
+    	
+        //return "BILDE\n" + super.toString() + url + "\n";
     }
     
     public String toHTML() {
